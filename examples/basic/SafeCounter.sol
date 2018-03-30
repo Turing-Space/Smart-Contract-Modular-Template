@@ -1,5 +1,7 @@
 /*
- * Great reference: https://github.com/OpenZeppelin/zeppelin-solidity/blob/master/contracts/math/SafeMath.sol
+ * Great reference: 
+ * * https://github.com/OpenZeppelin/zeppelin-solidity/blob/master/contracts/math/SafeMath.sol
+ * * https://medium.com/crypto-currently/build-your-first-smart-contract-fc36a8ff50ca
 */
 
 pragma solidity ^0.4.13;
