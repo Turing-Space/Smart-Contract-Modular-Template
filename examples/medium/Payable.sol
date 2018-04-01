@@ -1,6 +1,6 @@
 pragma solidity ^0.4.13;
 
-contract SamplePaybale {
+contract Paybale {
     
     event Donate(address sender, uint amount);
     
