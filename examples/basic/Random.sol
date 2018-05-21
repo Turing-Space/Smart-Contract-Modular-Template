@@ -11,7 +11,12 @@ contract Random {
     }
     
     function generateRandom(uint min, uint max) public constant returns (uint) {
-        return (getNow() % (max - min)) + min; 
+        return (now % (max - min)) + min; 
+    }
+    
+    function generateRandomNum(string input) returns (uint){
+        bytes32 hash = keccak256(input);
+        return (uint(hash) + now) % 100;
     }
 
 }
