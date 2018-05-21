@@ -12,9 +12,4 @@ contract DataManipulation{
         assert(x == 2 && y == 1);
     }
     
-    function generateRandomNum(string input) returns (uint){
-        bytes32 hash = keccak256(input);
-        return (uint(hash) + now) % 100;
-    }
-    
 }
