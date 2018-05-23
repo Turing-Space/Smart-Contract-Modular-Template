@@ -1,13 +1,12 @@
 pragma solidity ^0.4.21;
 
 contract Random {
-
-    function getNow() public constant returns (uint) {
-        return block.timestamp;
-    }
-    
     function getBlockNum() public constant returns (uint) {
         return block.number;
+    }
+    
+    function getNow() public constant returns (uint) {
+        return now;
     }
     
     function randNow(uint min, uint max) public constant returns (uint) {
@@ -15,7 +14,7 @@ contract Random {
     }
     
     function randHash(uint min, uint max) public constant returns (uint){
-        bytes32 hash = keccak256(getNow(), getBlockNum());
-        return ((uint(hash) + now) % (max - min)) + min; 
+        bytes32 hash = keccak256(getNow());
+        return (uint(hash) % (max - min)) + min; 
     }
 }
