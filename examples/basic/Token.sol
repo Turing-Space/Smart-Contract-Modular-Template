@@ -3,13 +3,17 @@
  * Orginal source: https://www.ethereum.org/token
 */
 
-pragma solidity ^0.4.13;
+pragma solidity ^0.4.21;
 
 contract Token {
-    mapping (address => uint256) public balances;
+    mapping (address => uint256) private balances;
+    
+    function getBalance(address _account) public constant returns (uint256) {
+        return balances[_account];
+    }
 
-    function Token(uint256 initialSupply) public {
-        balances[msg.sender] = initialSupply;
+    function Token(uint256 _initialSupply) public {
+        balances[msg.sender] = _initialSupply;
     }
 
     function transfer(address _to, uint256 _value) public {
