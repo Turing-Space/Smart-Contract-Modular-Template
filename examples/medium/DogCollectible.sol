@@ -20,4 +20,20 @@ contract DogCollectible {
         dogs.push(dog);
         totalDogs += 1;
     }
+    
+    // 取的狗總數
+    function getTotalDog() public view returns (uint256) {
+        return totalDogs;
+    }
+    
+    // 取得狗名
+    function getDogNameAt(uint256 i) public view returns (string) {
+        return dogs[i].name;
+    }
+    
+    // 取得狗歲
+    function getDogAgeAt(uint256 i) public view returns (uint256) {
+        return dogs[i].age;
+    }
+    
 }
