@@ -6,12 +6,8 @@
 pragma solidity ^0.4.21;
 
 contract Token {
-    mapping (address => uint256) private balances;
+    mapping (address => uint256) public balances;
     
-    function getBalance(address _account) public constant returns (uint256) {
-        return balances[_account];
-    }
-
     function Token(uint256 _initialSupply) public {
         balances[msg.sender] = _initialSupply;
     }
