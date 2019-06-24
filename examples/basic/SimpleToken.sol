@@ -13,7 +13,7 @@ import "https://github.com/OpenZeppelin/openzeppelin-solidity/contracts/token/ER
  */
 contract SimpleToken is ERC20, ERC20Detailed {
 
-  uint256 public constant INITIAL_SUPPLY = 10000 * (10 ** 18);
+  uint256 public constant INITIAL_SUPPLY = 1e4 * (1e18);
 
   /**
    * @dev Constructor that gives msg.sender all of existing tokens.
