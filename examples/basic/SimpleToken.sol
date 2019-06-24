@@ -9,6 +9,7 @@ import "https://github.com/OpenZeppelin/openzeppelin-solidity/contracts/token/ER
  * @dev Very simple ERC20 Token example, where all tokens are pre-assigned to the creator.
  * Note they can later distribute these tokens as they wish using `transfer` and other
  * `ERC20` functions.
+ * Referenced from: https://github.com/OpenZeppelin/openzeppelin-solidity/blob/master/contracts/examples/SimpleToken.sol
  */
 contract SimpleToken is ERC20, ERC20Detailed {
 
