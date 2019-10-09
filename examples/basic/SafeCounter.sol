@@ -1,12 +1,11 @@
 /*
- * Great reference: 
- * * https://github.com/OpenZeppelin/zeppelin-solidity/blob/master/contracts/math/SafeMath.sol
+ * Great reference:
+ * * https://github.com/OpenZeppelin/openzeppelin-contracts/contracts/math/SafeMath.sol
  * * https://medium.com/crypto-currently/build-your-first-smart-contract-fc36a8ff50ca
 */
+pragma solidity >=0.5.0;
 
-pragma solidity ^0.4.13;
-
-import "github.com/OpenZeppelin/zeppelin-solidity/contracts/math/SafeMath.sol"; 
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/contracts/math/SafeMath.sol";
 
 contract SafeCounter {
     using SafeMath for uint;
@@ -21,7 +20,7 @@ contract SafeCounter {
         count = count.sub(1);
     }
 
-    function getCount() public constant returns (uint) {
+    function getCount() public view returns (uint) {
         return count;
     }
 }

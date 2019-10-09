@@ -1,6 +1,6 @@
-pragma solidity ^0.4.13;
+pragma solidity >= 0.5.0;
 
-import "github.com/OpenZeppelin/zeppelin-solidity/contracts/math/SafeMath.sol";
+import "github.com/OpenZeppelin/openzeppelin-solidity/contracts/math/SafeMath.sol";
 
 contract Voting {
     using SafeMath for uint;
@@ -21,7 +21,7 @@ contract Voting {
         _;
     }
     
-    function Voting() public { // constructor
+    constructor() public { // constructor
         candidates[0] = 0;
         candidates[1] = 0;
         candidates[2] = 0;
@@ -33,7 +33,7 @@ contract Voting {
         voted[msg.sender] = true;
     }
     
-    function getVote(uint candidateID) public isValidCandidate(candidateID) constant returns (uint) {
+    function getVote(uint candidateID) public isValidCandidate(candidateID) view returns (uint) {
         return candidates[candidateID];
     }
     
