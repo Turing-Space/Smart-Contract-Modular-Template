@@ -20,6 +20,7 @@ npx solidity-coverage
 
 # Now there should be a report with very low coverage...
 ```
+![image](https://github.com/tienshaoku/Smart-Contract-Modular-Template/blob/master/examples/TCI_Shao/test-Ownable.sol/report.png)
 
 <br>
 
@@ -58,6 +59,9 @@ To know better the reason behind this, I dig into the directory storing Assert.s
 ```
 /usr/local/lib/node_modules/truffle/build
 ```
+
+![image](https://github.com/tienshaoku/Smart-Contract-Modular-Template/blob/master/examples/TCI_Shao/test-Ownable.sol/directory.png)
+
 but **fail to find DeployedAddresses.sol** ?
 
 Therefore, as usual I turn to Google and find the following article: [Click!](http://www.talkcrypto.org/blog/2019/01/11/where-is-deployedaddresses-sol-when-testing-in-truffle/)
