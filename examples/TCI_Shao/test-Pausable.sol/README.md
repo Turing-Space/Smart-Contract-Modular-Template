@@ -21,6 +21,8 @@ npx solidity-coverage
 # Everything should go fine and generate an image like the following one:
 ```
 
+![image](https://github.com/tienshaoku/Smart-Contract-Modular-Template/blob/master/examples/TCI_Shao/test-Pausable.sol/report_in_terminal.png)
+
 <br>
 
 ## Inspect the coverage report
@@ -31,4 +33,4 @@ open index.html
 # We can then inspect the detailed coverage report of each line.
 ```
 
-
+![image](https://github.com/tienshaoku/Smart-Contract-Modular-Template/blob/master/examples/TCI_Shao/test-Pausable.sol/html_report.png)
