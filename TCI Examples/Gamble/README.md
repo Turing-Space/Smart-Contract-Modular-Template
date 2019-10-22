@@ -21,10 +21,10 @@ $ npm install @openzeppelin/contracts
 Because our contract will import the Ownable.sol that from OpenZeppelin.
 
 3. write your smart contract in the contracts folder.
-In this Example, I just write [Gamble](https://github.com/jerryleetw1992/SmartContract-Gamble/blob/master/contracts/Gamble.sol) and [Leaderboard](https://github.com/jerryleetw1992/SmartContract-Gamble/blob/master/contracts/Leaderboard.sol)
+In this Example, I just write [Gamble](https://github.com/jerryleetw1992/Smart-Contract-Modular-Template/blob/master/TCI%20Examples/Gamble/contracts/Gamble.sol) and [Leaderboard](https://github.com/jerryleetw1992/Smart-Contract-Modular-Template/blob/master/TCI%20Examples/Gamble/contracts/Leaderboard.sol)
 
 ## How to test
-* write your test code in the test folder. Like: [gamble.js](https://github.com/jerryleetw1992/SmartContract-Gamble/blob/master/test/gamble.js)
+* write your test code in the test folder. Like: [gamble.js](https://github.com/jerryleetw1992/Smart-Contract-Modular-Template/blob/master/TCI%20Examples/Gamble/test/gamble.js)
 > Truffle teaching: [TESTING YOUR CONTRACTS](https://www.trufflesuite.com/docs/truffle/testing/testing-your-contracts)
 
 ## How to show testing coverage
@@ -34,7 +34,9 @@ In this Example, I just write [Gamble](https://github.com/jerryleetw1992/SmartCo
 $ npm install --save-dev solidity-coverage
 ```
 
-2. Run
+2. Add .solcover.js file
+[.solcover.js](https://github.com/jerryleetw1992/Smart-Contract-Modular-Template/blob/master/TCI%20Examples/Gamble/.solcover.js)
+3. Run
 ```
 $ npx solidity-coverage
 ```
