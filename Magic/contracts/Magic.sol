@@ -21,6 +21,11 @@ contract Magic {
 		_;
 	}
 
+	modifier checkCoolDown(uint _type) {	
+		require(audience[msg.sender].cooldown[_type] <= now);
+		_;
+	}
+
 	function donate() payable public {
       	audience[msg.sender].donation+=msg.value;
   	}
