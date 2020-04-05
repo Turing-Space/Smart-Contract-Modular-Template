@@ -17,7 +17,7 @@ contract SimpleToken is ERC20 {
   /**
    * @dev Constructor that gives msg.sender all of existing tokens.
    */
-  constructor() public ERC20("Bili", "BL") {
+  constructor() public ERC20("TaiyakiToken", "TYK") {
     _mint(msg.sender, INITIAL_SUPPLY);
   }
 
