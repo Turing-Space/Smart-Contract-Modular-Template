@@ -1,0 +1,1202 @@
+{
+  "contractName": "PausableMock",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "count",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "onlyPauserMock",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "unpause",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isPauser",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "paused",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "removePauser",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renouncePauser",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "drasticMeasureTaken",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addPauser",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "pause",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Paused",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Unpaused",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "PauserAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "PauserRemoved",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "normalProcess",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "drasticMeasure",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.7+commit.6da8b019\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"count\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"onlyPauserMock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"unpause\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isPauser\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"paused\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"removePauser\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renouncePauser\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"drasticMeasureTaken\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"addPauser\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"pause\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"drasticMeasure\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"normalProcess\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Paused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Unpaused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"account\",\"type\":\"address\"}],\"name\":\"PauserAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"account\",\"type\":\"address\"}],\"name\":\"PauserRemoved\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{\"pause()\":{\"details\":\"Called by a pauser to pause, triggers stopped state.\"},\"paused()\":{\"details\":\"Returns true if the contract is paused, and false otherwise.\"},\"unpause()\":{\"details\":\"Called by a pauser to unpause, returns to normal state.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/frangio/oz/contracts/contracts/mocks/PausableMock.sol\":\"PausableMock\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/frangio/oz/contracts/contracts/access/Roles.sol\":{\"keccak256\":\"0xb002c378d7b82a101bd659c341518953ca0919d342c0a400196982c0e7e7bcdb\",\"urls\":[\"bzzr://bd34c1ce05b5b2b3a62fc02e160f6805b1cadd476854664f433c685b2fda8dad\"]},\"/home/frangio/oz/contracts/contracts/access/roles/PauserRole.sol\":{\"keccak256\":\"0xf6826c684d51ca28db5293ce11a54c5cca1c757b6cd32b87613833c65086f995\",\"urls\":[\"bzzr://01b2756ab5b41b1d7ccadfeac53fbdce9c889263f1e011329c300c5fa3fda65f\"]},\"/home/frangio/oz/contracts/contracts/lifecycle/Pausable.sol\":{\"keccak256\":\"0x609f8cb524cd6b502624c79c099ec2fc6f23eef57b5c38e28efd82490875f37e\",\"urls\":[\"bzzr://46ee461a64298ef418bd100df1301355f4dc9ffeb06fe7a39aaf98d45c0bf988\"]},\"/home/frangio/oz/contracts/contracts/mocks/PausableMock.sol\":{\"keccak256\":\"0x5a894da1748f4b6cd2d8df2e7c26fc116f62a4b678881928202793d9aac9e245\",\"urls\":[\"bzzr://2c7219e49848b660ac08ba7162704d766d19b8d7bf72e690c4a984eac846f0e8\"]},\"/home/frangio/oz/contracts/contracts/mocks/PauserRoleMock.sol\":{\"keccak256\":\"0x794a85febd18a7ad12e6263f35f556b961b53099f42eee8edbd9bd119a492b77\",\"urls\":[\"bzzr://8423e08ca36498f28831e00ae489525ad40cc1e70eadc027adc5b796a6d0460e\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506100203361006260201b60201c565b6000600160006101000a81548160ff02191690831515021790555060006001806101000a81548160ff021916908315150217905550600060028190555061027f565b61007a8160006100c060201b6108fb1790919060201c565b8073ffffffffffffffffffffffffffffffffffffffff167f6719d08c1888103bea251a4ed56406bd0c3e69723c8a1686e017e7bbe159b6f860405160405180910390a250565b6100d082826101a160201b60201c565b15610143576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f526f6c65733a206163636f756e7420616c72656164792068617320726f6c650081525060200191505060405180910390fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff161415610228576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526022815260200180610dc06022913960400191505060405180910390fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b610b328061028e6000396000f3fe608060405234801561001057600080fd5b50600436106100b45760003560e01c80636ef8d66d116100715780636ef8d66d146101ad57806376657b8e146101b757806382dc1ec4146101d95780638456cb591461021d5780639958f04514610227578063e7651d7a14610231576100b4565b806306661abd146100b9578063329daf90146100d75780633f4ba83a146100e157806346fbf68e146100eb5780635c975abb146101475780636b2c0f5514610169575b600080fd5b6100c161023b565b6040518082815260200191505060405180910390f35b6100df610241565b005b6100e96102a1565b005b61012d6004803603602081101561010157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610401565b604051808215151515815260200191505060405180910390f35b61014f61041e565b604051808215151515815260200191505060405180910390f35b6101ab6004803603602081101561017f57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610435565b005b6101b5610441565b005b6101bf61044c565b604051808215151515815260200191505060405180910390f35b61021b600480360360208110156101ef57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061045e565b005b6102256104c8565b005b61022f610628565b005b6102396106c6565b005b60025481565b61024a33610401565b61029f576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526030815260200180610a946030913960400191505060405180910390fd5b565b6102aa33610401565b6102ff576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526030815260200180610a946030913960400191505060405180910390fd5b600160009054906101000a900460ff16610381576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260148152602001807f5061757361626c653a206e6f742070617573656400000000000000000000000081525060200191505060405180910390fd5b6000600160006101000a81548160ff0219169083151502179055507f5db9ee0a495bf2e6ff9c91a7834c1ba4fdd244a5e8aa4e537bd38aeae4b073aa33604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a1565b600061041782600061075d90919063ffffffff16565b9050919050565b6000600160009054906101000a900460ff16905090565b61043e8161083b565b50565b61044a3361083b565b565b6001809054906101000a900460ff1681565b61046733610401565b6104bc576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526030815260200180610a946030913960400191505060405180910390fd5b6104c581610847565b50565b6104d133610401565b610526576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526030815260200180610a946030913960400191505060405180910390fd5b600160009054906101000a900460ff16156105a9576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260108152602001807f5061757361626c653a207061757365640000000000000000000000000000000081525060200191505060405180910390fd5b60018060006101000a81548160ff0219169083151502179055507f62e78cea01bee320cd4e420270b5ea74000d11b0c9f74754ebdbfc544b05a25833604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a1565b600160009054906101000a900460ff166106aa576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260148152602001807f5061757361626c653a206e6f742070617573656400000000000000000000000081525060200191505060405180910390fd5b60018060016101000a81548160ff021916908315150217905550565b600160009054906101000a900460ff1615610749576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260108152602001807f5061757361626c653a207061757365640000000000000000000000000000000081525060200191505060405180910390fd5b600260008154809291906001019190505550565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff1614156107e4576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526022815260200180610ae56022913960400191505060405180910390fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b610844816108a1565b50565b61085b8160006108fb90919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f6719d08c1888103bea251a4ed56406bd0c3e69723c8a1686e017e7bbe159b6f860405160405180910390a250565b6108b58160006109d690919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fcd265ebaf09df2871cc7bd4133404a235ba12eff2041bb89d9c714a2621c7c7e60405160405180910390a250565b610905828261075d565b15610978576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f526f6c65733a206163636f756e7420616c72656164792068617320726f6c650081525060200191505060405180910390fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b6109e0828261075d565b610a35576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526021815260200180610ac46021913960400191505060405180910390fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550505056fe506175736572526f6c653a2063616c6c657220646f6573206e6f742068617665207468652050617573657220726f6c65526f6c65733a206163636f756e7420646f6573206e6f74206861766520726f6c65526f6c65733a206163636f756e7420697320746865207a65726f2061646472657373a165627a7a72305820aaa18d9bf5ab9c537be93820bc3cb7f9a4b01051f145b77287e1c6ea6ff7af0e0029526f6c65733a206163636f756e7420697320746865207a65726f2061646472657373",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100b45760003560e01c80636ef8d66d116100715780636ef8d66d146101ad57806376657b8e146101b757806382dc1ec4146101d95780638456cb591461021d5780639958f04514610227578063e7651d7a14610231576100b4565b806306661abd146100b9578063329daf90146100d75780633f4ba83a146100e157806346fbf68e146100eb5780635c975abb146101475780636b2c0f5514610169575b600080fd5b6100c161023b565b6040518082815260200191505060405180910390f35b6100df610241565b005b6100e96102a1565b005b61012d6004803603602081101561010157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610401565b604051808215151515815260200191505060405180910390f35b61014f61041e565b604051808215151515815260200191505060405180910390f35b6101ab6004803603602081101561017f57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610435565b005b6101b5610441565b005b6101bf61044c565b604051808215151515815260200191505060405180910390f35b61021b600480360360208110156101ef57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061045e565b005b6102256104c8565b005b61022f610628565b005b6102396106c6565b005b60025481565b61024a33610401565b61029f576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526030815260200180610a946030913960400191505060405180910390fd5b565b6102aa33610401565b6102ff576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526030815260200180610a946030913960400191505060405180910390fd5b600160009054906101000a900460ff16610381576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260148152602001807f5061757361626c653a206e6f742070617573656400000000000000000000000081525060200191505060405180910390fd5b6000600160006101000a81548160ff0219169083151502179055507f5db9ee0a495bf2e6ff9c91a7834c1ba4fdd244a5e8aa4e537bd38aeae4b073aa33604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a1565b600061041782600061075d90919063ffffffff16565b9050919050565b6000600160009054906101000a900460ff16905090565b61043e8161083b565b50565b61044a3361083b565b565b6001809054906101000a900460ff1681565b61046733610401565b6104bc576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526030815260200180610a946030913960400191505060405180910390fd5b6104c581610847565b50565b6104d133610401565b610526576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526030815260200180610a946030913960400191505060405180910390fd5b600160009054906101000a900460ff16156105a9576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260108152602001807f5061757361626c653a207061757365640000000000000000000000000000000081525060200191505060405180910390fd5b60018060006101000a81548160ff0219169083151502179055507f62e78cea01bee320cd4e420270b5ea74000d11b0c9f74754ebdbfc544b05a25833604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a1565b600160009054906101000a900460ff166106aa576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260148152602001807f5061757361626c653a206e6f742070617573656400000000000000000000000081525060200191505060405180910390fd5b60018060016101000a81548160ff021916908315150217905550565b600160009054906101000a900460ff1615610749576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260108152602001807f5061757361626c653a207061757365640000000000000000000000000000000081525060200191505060405180910390fd5b600260008154809291906001019190505550565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff1614156107e4576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526022815260200180610ae56022913960400191505060405180910390fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b610844816108a1565b50565b61085b8160006108fb90919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f6719d08c1888103bea251a4ed56406bd0c3e69723c8a1686e017e7bbe159b6f860405160405180910390a250565b6108b58160006109d690919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fcd265ebaf09df2871cc7bd4133404a235ba12eff2041bb89d9c714a2621c7c7e60405160405180910390a250565b610905828261075d565b15610978576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f526f6c65733a206163636f756e7420616c72656164792068617320726f6c650081525060200191505060405180910390fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b6109e0828261075d565b610a35576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526021815260200180610ac46021913960400191505060405180910390fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550505056fe506175736572526f6c653a2063616c6c657220646f6573206e6f742068617665207468652050617573657220726f6c65526f6c65733a206163636f756e7420646f6573206e6f74206861766520726f6c65526f6c65733a206163636f756e7420697320746865207a65726f2061646472657373a165627a7a72305820aaa18d9bf5ab9c537be93820bc3cb7f9a4b01051f145b77287e1c6ea6ff7af0e0029",
+  "sourceMap": "122:380:79:-;;;242:85;8:9:-1;5:2;;;30:1;27;20:12;5:2;242:85:79;275:22:3;286:10;275;;;:22;;:::i;:::-;985:5:38;975:7;;:15;;;;;;;;;;;;;;;;;;296:5:79;274:19;;:27;;;;;;;;;;;;;;;;;;319:1;311:5;:9;;;;122:380;;737:119:3;793:21;806:7;793:8;:12;;;;;;:21;;;;:::i;:::-;841:7;829:20;;;;;;;;;;;;737:119;:::o;260:175:0:-;337:18;341:4;347:7;337:3;;;:18;;:::i;:::-;336:19;328:63;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;424:4;401;:11;;:20;413:7;401:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;260:175;;:::o;779:200::-;851:4;894:1;875:21;;:7;:21;;;;867:68;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;952:4;:11;;:20;964:7;952:20;;;;;;;;;;;;;;;;;;;;;;;;;945:27;;779:200;;;;:::o;122:380:79:-;;;;;;;",
+  "deployedSourceMap": "122:380:79:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;122:380:79;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;215:20;;;:::i;:::-;;;;;;;;;;;;;;;;;;;202:113:80;;;:::i;:::-;;1852:115:38;;;:::i;:::-;;447:107:3;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;447:107:3;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1092:76:38;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;111:85:80;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;111:85:80;;;;;;;;;;;;;;;;;;;:::i;:::-;;656:75:3;;;:::i;:::-;;178:31:79;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;560:90:3;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;560:90:3;;;;;;;;;;;;;;;;;;;:::i;:::-;;1649:113:38;;;:::i;:::-;;411:89:79;;;:::i;:::-;;333:72;;;:::i;:::-;;215:20;;;;:::o;202:113:80:-;350:20:3;359:10;350:8;:20::i;:::-;342:81;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;202:113:80:o;1852:115:38:-;350:20:3;359:10;350:8;:20::i;:::-;342:81;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1512:7:38;;;;;;;;;;;1504:40;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1920:5;1910:7;;:15;;;;;;;;;;;;;;;;;;1940:20;1949:10;1940:20;;;;;;;;;;;;;;;;;;;;;;1852:115::o;447:107:3:-;503:4;526:21;539:7;526:8;:12;;:21;;;;:::i;:::-;519:28;;447:107;;;:::o;1092:76:38:-;1131:4;1154:7;;;;;;;;;;;1147:14;;1092:76;:::o;111:85:80:-;167:22;181:7;167:13;:22::i;:::-;111:85;:::o;656:75:3:-;699:25;713:10;699:13;:25::i;:::-;656:75::o;178:31:79:-;;;;;;;;;;;;;:::o;560:90:3:-;350:20;359:10;350:8;:20::i;:::-;342:81;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;624:19;635:7;624:10;:19::i;:::-;560:90;:::o;1649:113:38:-;350:20:3;359:10;350:8;:20::i;:::-;342:81;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1321:7:38;;;;;;;;;;;1320:8;1312:37;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1718:4;1708:7;;:14;;;;;;;;;;;;;;;;;;1737:18;1744:10;1737:18;;;;;;;;;;;;;;;;;;;;;;1649:113::o;411:89:79:-;1512:7:38;;;;;;;;;;;1504:40;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;489:4:79;467:19;;:26;;;;;;;;;;;;;;;;;;411:89::o;333:72::-;1321:7:38;;;;;;;;;;;1320:8;1312:37;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;391:5:79;;:7;;;;;;;;;;;;;333:72::o;779:200:0:-;851:4;894:1;875:21;;:7;:21;;;;867:68;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;952:4;:11;;:20;964:7;952:20;;;;;;;;;;;;;;;;;;;;;;;;;945:27;;779:200;;;;:::o;394:94:80:-;453:28;473:7;453:19;:28::i;:::-;394:94;:::o;737:119:3:-;793:21;806:7;793:8;:12;;:21;;;;:::i;:::-;841:7;829:20;;;;;;;;;;;;737:119;:::o;862:127::-;921:24;937:7;921:8;:15;;:24;;;;:::i;:::-;974:7;960:22;;;;;;;;;;;;862:127;:::o;260:175:0:-;337:18;341:4;347:7;337:3;:18::i;:::-;336:19;328:63;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;424:4;401;:11;;:20;413:7;401:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;260:175;;:::o;510:180::-;589:18;593:4;599:7;589:3;:18::i;:::-;581:64;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;678:5;655:4;:11;;:20;667:7;655:20;;;;;;;;;;;;;;;;:28;;;;;;;;;;;;;;;;;;510:180;;:::o",
+  "source": "pragma solidity ^0.5.0;\n\nimport \"../lifecycle/Pausable.sol\";\nimport \"./PauserRoleMock.sol\";\n\n// mock class using Pausable\ncontract PausableMock is Pausable, PauserRoleMock {\n    bool public drasticMeasureTaken;\n    uint256 public count;\n\n    constructor () public {\n        drasticMeasureTaken = false;\n        count = 0;\n    }\n\n    function normalProcess() external whenNotPaused {\n        count++;\n    }\n\n    function drasticMeasure() external whenPaused {\n        drasticMeasureTaken = true;\n    }\n}\n",
+  "sourcePath": "/home/frangio/oz/contracts/contracts/mocks/PausableMock.sol",
+  "ast": {
+    "absolutePath": "/home/frangio/oz/contracts/contracts/mocks/PausableMock.sol",
+    "exportedSymbols": {
+      "PausableMock": [
+        5955
+      ]
+    },
+    "id": 5956,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5913,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:79"
+      },
+      {
+        "absolutePath": "/home/frangio/oz/contracts/contracts/lifecycle/Pausable.sol",
+        "file": "../lifecycle/Pausable.sol",
+        "id": 5914,
+        "nodeType": "ImportDirective",
+        "scope": 5956,
+        "sourceUnit": 4105,
+        "src": "25:35:79",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/frangio/oz/contracts/contracts/mocks/PauserRoleMock.sol",
+        "file": "./PauserRoleMock.sol",
+        "id": 5915,
+        "nodeType": "ImportDirective",
+        "scope": 5956,
+        "sourceUnit": 5990,
+        "src": "61:30:79",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 5916,
+              "name": "Pausable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4104,
+              "src": "147:8:79",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Pausable_$4104",
+                "typeString": "contract Pausable"
+              }
+            },
+            "id": 5917,
+            "nodeType": "InheritanceSpecifier",
+            "src": "147:8:79"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 5918,
+              "name": "PauserRoleMock",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5989,
+              "src": "157:14:79",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_PauserRoleMock_$5989",
+                "typeString": "contract PauserRoleMock"
+              }
+            },
+            "id": 5919,
+            "nodeType": "InheritanceSpecifier",
+            "src": "157:14:79"
+          }
+        ],
+        "contractDependencies": [
+          392,
+          4104,
+          5989
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5955,
+        "linearizedBaseContracts": [
+          5955,
+          5989,
+          4104,
+          392
+        ],
+        "name": "PausableMock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 5921,
+            "name": "drasticMeasureTaken",
+            "nodeType": "VariableDeclaration",
+            "scope": 5955,
+            "src": "178:31:79",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 5920,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "178:4:79",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 5923,
+            "name": "count",
+            "nodeType": "VariableDeclaration",
+            "scope": 5955,
+            "src": "215:20:79",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 5922,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "215:7:79",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5934,
+              "nodeType": "Block",
+              "src": "264:63:79",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 5928,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 5926,
+                      "name": "drasticMeasureTaken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5921,
+                      "src": "274:19:79",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "66616c7365",
+                      "id": 5927,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "296:5:79",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "false"
+                    },
+                    "src": "274:27:79",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 5929,
+                  "nodeType": "ExpressionStatement",
+                  "src": "274:27:79"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 5932,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 5930,
+                      "name": "count",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5923,
+                      "src": "311:5:79",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 5931,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "319:1:79",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "311:9:79",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 5933,
+                  "nodeType": "ExpressionStatement",
+                  "src": "311:9:79"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5935,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5924,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "254:2:79"
+            },
+            "returnParameters": {
+              "id": 5925,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "264:0:79"
+            },
+            "scope": 5955,
+            "src": "242:85:79",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5943,
+              "nodeType": "Block",
+              "src": "381:24:79",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 5941,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "391:7:79",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 5940,
+                      "name": "count",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5923,
+                      "src": "391:5:79",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 5942,
+                  "nodeType": "ExpressionStatement",
+                  "src": "391:7:79"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5944,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 5938,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 5937,
+                  "name": "whenNotPaused",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 4060,
+                  "src": "367:13:79",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "367:13:79"
+              }
+            ],
+            "name": "normalProcess",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5936,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "355:2:79"
+            },
+            "returnParameters": {
+              "id": 5939,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "381:0:79"
+            },
+            "scope": 5955,
+            "src": "333:72:79",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 5953,
+              "nodeType": "Block",
+              "src": "457:43:79",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 5951,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 5949,
+                      "name": "drasticMeasureTaken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5921,
+                      "src": "467:19:79",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 5950,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "489:4:79",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "467:26:79",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 5952,
+                  "nodeType": "ExpressionStatement",
+                  "src": "467:26:79"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5954,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 5947,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 5946,
+                  "name": "whenPaused",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 4069,
+                  "src": "446:10:79",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "446:10:79"
+              }
+            ],
+            "name": "drasticMeasure",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5945,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "434:2:79"
+            },
+            "returnParameters": {
+              "id": 5948,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "457:0:79"
+            },
+            "scope": 5955,
+            "src": "411:89:79",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5956,
+        "src": "122:380:79"
+      }
+    ],
+    "src": "0:503:79"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/frangio/oz/contracts/contracts/mocks/PausableMock.sol",
+    "exportedSymbols": {
+      "PausableMock": [
+        5955
+      ]
+    },
+    "id": 5956,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5913,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:79"
+      },
+      {
+        "absolutePath": "/home/frangio/oz/contracts/contracts/lifecycle/Pausable.sol",
+        "file": "../lifecycle/Pausable.sol",
+        "id": 5914,
+        "nodeType": "ImportDirective",
+        "scope": 5956,
+        "sourceUnit": 4105,
+        "src": "25:35:79",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/frangio/oz/contracts/contracts/mocks/PauserRoleMock.sol",
+        "file": "./PauserRoleMock.sol",
+        "id": 5915,
+        "nodeType": "ImportDirective",
+        "scope": 5956,
+        "sourceUnit": 5990,
+        "src": "61:30:79",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 5916,
+              "name": "Pausable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4104,
+              "src": "147:8:79",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Pausable_$4104",
+                "typeString": "contract Pausable"
+              }
+            },
+            "id": 5917,
+            "nodeType": "InheritanceSpecifier",
+            "src": "147:8:79"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 5918,
+              "name": "PauserRoleMock",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5989,
+              "src": "157:14:79",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_PauserRoleMock_$5989",
+                "typeString": "contract PauserRoleMock"
+              }
+            },
+            "id": 5919,
+            "nodeType": "InheritanceSpecifier",
+            "src": "157:14:79"
+          }
+        ],
+        "contractDependencies": [
+          392,
+          4104,
+          5989
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5955,
+        "linearizedBaseContracts": [
+          5955,
+          5989,
+          4104,
+          392
+        ],
+        "name": "PausableMock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 5921,
+            "name": "drasticMeasureTaken",
+            "nodeType": "VariableDeclaration",
+            "scope": 5955,
+            "src": "178:31:79",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 5920,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "178:4:79",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 5923,
+            "name": "count",
+            "nodeType": "VariableDeclaration",
+            "scope": 5955,
+            "src": "215:20:79",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 5922,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "215:7:79",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5934,
+              "nodeType": "Block",
+              "src": "264:63:79",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 5928,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 5926,
+                      "name": "drasticMeasureTaken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5921,
+                      "src": "274:19:79",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "66616c7365",
+                      "id": 5927,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "296:5:79",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "false"
+                    },
+                    "src": "274:27:79",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 5929,
+                  "nodeType": "ExpressionStatement",
+                  "src": "274:27:79"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 5932,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 5930,
+                      "name": "count",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5923,
+                      "src": "311:5:79",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 5931,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "319:1:79",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "311:9:79",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 5933,
+                  "nodeType": "ExpressionStatement",
+                  "src": "311:9:79"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5935,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5924,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "254:2:79"
+            },
+            "returnParameters": {
+              "id": 5925,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "264:0:79"
+            },
+            "scope": 5955,
+            "src": "242:85:79",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5943,
+              "nodeType": "Block",
+              "src": "381:24:79",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 5941,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "391:7:79",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 5940,
+                      "name": "count",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5923,
+                      "src": "391:5:79",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 5942,
+                  "nodeType": "ExpressionStatement",
+                  "src": "391:7:79"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5944,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 5938,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 5937,
+                  "name": "whenNotPaused",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 4060,
+                  "src": "367:13:79",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "367:13:79"
+              }
+            ],
+            "name": "normalProcess",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5936,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "355:2:79"
+            },
+            "returnParameters": {
+              "id": 5939,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "381:0:79"
+            },
+            "scope": 5955,
+            "src": "333:72:79",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 5953,
+              "nodeType": "Block",
+              "src": "457:43:79",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 5951,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 5949,
+                      "name": "drasticMeasureTaken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5921,
+                      "src": "467:19:79",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 5950,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "489:4:79",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "467:26:79",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 5952,
+                  "nodeType": "ExpressionStatement",
+                  "src": "467:26:79"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5954,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 5947,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 5946,
+                  "name": "whenPaused",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 4069,
+                  "src": "446:10:79",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "446:10:79"
+              }
+            ],
+            "name": "drasticMeasure",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5945,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "434:2:79"
+            },
+            "returnParameters": {
+              "id": 5948,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "457:0:79"
+            },
+            "scope": 5955,
+            "src": "411:89:79",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5956,
+        "src": "122:380:79"
+      }
+    ],
+    "src": "0:503:79"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.7+commit.6da8b019.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.9",
+  "updatedAt": "2019-07-26T18:01:40.264Z",
+  "devdoc": {
+    "methods": {
+      "pause()": {
+        "details": "Called by a pauser to pause, triggers stopped state."
+      },
+      "paused()": {
+        "details": "Returns true if the contract is paused, and false otherwise."
+      },
+      "unpause()": {
+        "details": "Called by a pauser to unpause, returns to normal state."
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

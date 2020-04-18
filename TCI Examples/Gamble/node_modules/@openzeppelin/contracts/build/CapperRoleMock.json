@@ -1,0 +1,862 @@
+{
+  "contractName": "CapperRoleMock",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isCapper",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceCapper",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addCapper",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "CapperAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "CapperRemoved",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "removeCapper",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "onlyCapperMock",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.7+commit.6da8b019\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isCapper\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"removeCapper\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceCapper\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"addCapper\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"onlyCapperMock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"account\",\"type\":\"address\"}],\"name\":\"CapperAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"account\",\"type\":\"address\"}],\"name\":\"CapperRemoved\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/frangio/oz/contracts/contracts/mocks/CapperRoleMock.sol\":\"CapperRoleMock\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/frangio/oz/contracts/contracts/access/Roles.sol\":{\"keccak256\":\"0xb002c378d7b82a101bd659c341518953ca0919d342c0a400196982c0e7e7bcdb\",\"urls\":[\"bzzr://bd34c1ce05b5b2b3a62fc02e160f6805b1cadd476854664f433c685b2fda8dad\"]},\"/home/frangio/oz/contracts/contracts/access/roles/CapperRole.sol\":{\"keccak256\":\"0xd8fe847c97972de345e7cb50cfe5aa6ac4c73c041c183a9eaeadbc64c8ed8539\",\"urls\":[\"bzzr://0bb82a8e38a4f98e44b40bd6a64cd5025509e2b419aa81f1698b038972e0f296\"]},\"/home/frangio/oz/contracts/contracts/mocks/CapperRoleMock.sol\":{\"keccak256\":\"0xd466769b7c48d89126e5620abf9f69422ad3542cf5d6a50e5d803db5453d502a\",\"urls\":[\"bzzr://e48df485f7fd9c908d3d6d7c5e481beb60d5d001a2a54ac00a885ef8c97a3b2a\"]}},\"version\":1}",
+  "bytecode": "0x60806040526100133361001860201b60201c565b610235565b61003081600061007660201b6103f01790919060201c565b8073ffffffffffffffffffffffffffffffffffffffff167fa7555c95b69d4f5cc847881feb4ab2883a1921319e34fa2043747b793d65b36e60405160405180910390a250565b610086828261015760201b60201c565b156100f9576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f526f6c65733a206163636f756e7420616c72656164792068617320726f6c650081525060200191505060405180910390fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff1614156101de576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602281526020018061086b6022913960400191505060405180910390fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b610627806102446000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c8063395645611461005c5780633f4a6484146100b85780635d5576f8146100fc5780638dfbcf3614610106578063d1e07bcb1461014a575b600080fd5b61009e6004803603602081101561007257600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610154565b604051808215151515815260200191505060405180910390f35b6100fa600480360360208110156100ce57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610171565b005b61010461017d565b005b6101486004803603602081101561011c57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610188565b005b6101526101f2565b005b600061016a82600061025290919063ffffffff16565b9050919050565b61017a81610330565b50565b61018633610330565b565b61019133610154565b6101e6576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260308152602001806105cc6030913960400191505060405180910390fd5b6101ef8161033c565b50565b6101fb33610154565b610250576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260308152602001806105cc6030913960400191505060405180910390fd5b565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff1614156102d9576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260228152602001806105aa6022913960400191505060405180910390fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b61033981610396565b50565b6103508160006103f090919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fa7555c95b69d4f5cc847881feb4ab2883a1921319e34fa2043747b793d65b36e60405160405180910390a250565b6103aa8160006104cb90919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f427400d279c506df610224b22ecce89b693fc1865864113f21c8d19c1f0c2a3b60405160405180910390a250565b6103fa8282610252565b1561046d576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f526f6c65733a206163636f756e7420616c72656164792068617320726f6c650081525060200191505060405180910390fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b6104d58282610252565b61052a576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260218152602001806105896021913960400191505060405180910390fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550505056fe526f6c65733a206163636f756e7420646f6573206e6f74206861766520726f6c65526f6c65733a206163636f756e7420697320746865207a65726f2061646472657373436170706572526f6c653a2063616c6c657220646f6573206e6f742068617665207468652043617070657220726f6c65a165627a7a7230582029de3f0b083904228adab84810a25c39f6bea9ebd00740ce41350732ec9ec8c70029526f6c65733a206163636f756e7420697320746865207a65726f2061646472657373",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c8063395645611461005c5780633f4a6484146100b85780635d5576f8146100fc5780638dfbcf3614610106578063d1e07bcb1461014a575b600080fd5b61009e6004803603602081101561007257600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610154565b604051808215151515815260200191505060405180910390f35b6100fa600480360360208110156100ce57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610171565b005b61010461017d565b005b6101486004803603602081101561011c57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610188565b005b6101526101f2565b005b600061016a82600061025290919063ffffffff16565b9050919050565b61017a81610330565b50565b61018633610330565b565b61019133610154565b6101e6576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260308152602001806105cc6030913960400191505060405180910390fd5b6101ef8161033c565b50565b6101fb33610154565b610250576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260308152602001806105cc6030913960400191505060405180910390fd5b565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff1614156102d9576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260228152602001806105aa6022913960400191505060405180910390fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b61033981610396565b50565b6103508160006103f090919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fa7555c95b69d4f5cc847881feb4ab2883a1921319e34fa2043747b793d65b36e60405160405180910390a250565b6103aa8160006104cb90919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f427400d279c506df610224b22ecce89b693fc1865864113f21c8d19c1f0c2a3b60405160405180910390a250565b6103fa8282610252565b1561046d576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f526f6c65733a206163636f756e7420616c72656164792068617320726f6c650081525060200191505060405180910390fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b6104d58282610252565b61052a576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260218152602001806105896021913960400191505060405180910390fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550505056fe526f6c65733a206163636f756e7420646f6573206e6f74206861766520726f6c65526f6c65733a206163636f756e7420697320746865207a65726f2061646472657373436170706572526f6c653a2063616c6c657220646f6573206e6f742068617665207468652043617070657220726f6c65a165627a7a7230582029de3f0b083904228adab84810a25c39f6bea9ebd00740ce41350732ec9ec8c70029",
+  "sourceMap": "67:423:45:-;;;275:22:1;286:10;275;;;:22;;:::i;:::-;67:423:45;;737:119:1;793:21;806:7;793:8;:12;;;;;;:21;;;;:::i;:::-;841:7;829:20;;;;;;;;;;;;737:119;:::o;260:175:0:-;337:18;341:4;347:7;337:3;;;:18;;:::i;:::-;336:19;328:63;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;424:4;401;:11;;:20;413:7;401:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;260:175;;:::o;779:200::-;851:4;894:1;875:21;;:7;:21;;;;867:68;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;952:4;:11;;:20;964:7;952:20;;;;;;;;;;;;;;;;;;;;;;;;;945:27;;779:200;;;;:::o;67:423:45:-;;;;;;;",
+  "deployedSourceMap": "67:423:45:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;67:423:45;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;447:107:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;447:107:1;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;111:85:45;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;111:85:45;;;;;;;;;;;;;;;;;;;:::i;:::-;;656:75:1;;;:::i;:::-;;560:90;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;560:90:1;;;;;;;;;;;;;;;;;;;:::i;:::-;;202:113:45;;;:::i;:::-;;447:107:1;503:4;526:21;539:7;526:8;:12;;:21;;;;:::i;:::-;519:28;;447:107;;;:::o;111:85:45:-;167:22;181:7;167:13;:22::i;:::-;111:85;:::o;656:75:1:-;699:25;713:10;699:13;:25::i;:::-;656:75::o;560:90::-;350:20;359:10;350:8;:20::i;:::-;342:81;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;624:19;635:7;624:10;:19::i;:::-;560:90;:::o;202:113:45:-;350:20:1;359:10;350:8;:20::i;:::-;342:81;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;202:113:45:o;779:200:0:-;851:4;894:1;875:21;;:7;:21;;;;867:68;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;952:4;:11;;:20;964:7;952:20;;;;;;;;;;;;;;;;;;;;;;;;;945:27;;779:200;;;;:::o;394:94:45:-;453:28;473:7;453:19;:28::i;:::-;394:94;:::o;737:119:1:-;793:21;806:7;793:8;:12;;:21;;;;:::i;:::-;841:7;829:20;;;;;;;;;;;;737:119;:::o;862:127::-;921:24;937:7;921:8;:15;;:24;;;;:::i;:::-;974:7;960:22;;;;;;;;;;;;862:127;:::o;260:175:0:-;337:18;341:4;347:7;337:3;:18::i;:::-;336:19;328:63;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;424:4;401;:11;;:20;413:7;401:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;260:175;;:::o;510:180::-;589:18;593:4;599:7;589:3;:18::i;:::-;581:64;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;678:5;655:4;:11;;:20;667:7;655:20;;;;;;;;;;;;;;;;:28;;;;;;;;;;;;;;;;;;510:180;;:::o",
+  "source": "pragma solidity ^0.5.0;\n\nimport \"../access/roles/CapperRole.sol\";\n\ncontract CapperRoleMock is CapperRole {\n    function removeCapper(address account) public {\n        _removeCapper(account);\n    }\n\n    function onlyCapperMock() public view onlyCapper {\n        // solhint-disable-previous-line no-empty-blocks\n    }\n\n    // Causes a compilation error if super._removeCapper is not internal\n    function _removeCapper(address account) internal {\n        super._removeCapper(account);\n    }\n}\n",
+  "sourcePath": "/home/frangio/oz/contracts/contracts/mocks/CapperRoleMock.sol",
+  "ast": {
+    "absolutePath": "/home/frangio/oz/contracts/contracts/mocks/CapperRoleMock.sol",
+    "exportedSymbols": {
+      "CapperRoleMock": [
+        4459
+      ]
+    },
+    "id": 4460,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4427,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:45"
+      },
+      {
+        "absolutePath": "/home/frangio/oz/contracts/contracts/access/roles/CapperRole.sol",
+        "file": "../access/roles/CapperRole.sol",
+        "id": 4428,
+        "nodeType": "ImportDirective",
+        "scope": 4460,
+        "sourceUnit": 185,
+        "src": "25:40:45",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 4429,
+              "name": "CapperRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 184,
+              "src": "94:10:45",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CapperRole_$184",
+                "typeString": "contract CapperRole"
+              }
+            },
+            "id": 4430,
+            "nodeType": "InheritanceSpecifier",
+            "src": "94:10:45"
+          }
+        ],
+        "contractDependencies": [
+          184
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 4459,
+        "linearizedBaseContracts": [
+          4459,
+          184
+        ],
+        "name": "CapperRoleMock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 4439,
+              "nodeType": "Block",
+              "src": "157:39:45",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 4436,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4432,
+                        "src": "181:7:45",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 4435,
+                      "name": "_removeCapper",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        4458
+                      ],
+                      "referencedDeclaration": 4458,
+                      "src": "167:13:45",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 4437,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "167:22:45",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 4438,
+                  "nodeType": "ExpressionStatement",
+                  "src": "167:22:45"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 4440,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeCapper",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4433,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4432,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4440,
+                  "src": "133:15:45",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4431,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "133:7:45",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "132:17:45"
+            },
+            "returnParameters": {
+              "id": 4434,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "157:0:45"
+            },
+            "scope": 4459,
+            "src": "111:85:45",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 4445,
+              "nodeType": "Block",
+              "src": "251:64:45",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 4446,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 4443,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 4442,
+                  "name": "onlyCapper",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 117,
+                  "src": "240:10:45",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "240:10:45"
+              }
+            ],
+            "name": "onlyCapperMock",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4441,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "225:2:45"
+            },
+            "returnParameters": {
+              "id": 4444,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "251:0:45"
+            },
+            "scope": 4459,
+            "src": "202:113:45",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 4457,
+              "nodeType": "Block",
+              "src": "443:45:45",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 4454,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4448,
+                        "src": "473:7:45",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 4451,
+                        "name": "super",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11834,
+                        "src": "453:5:45",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_super$_CapperRoleMock_$4459",
+                          "typeString": "contract super CapperRoleMock"
+                        }
+                      },
+                      "id": 4453,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "_removeCapper",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 183,
+                      "src": "453:19:45",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 4455,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "453:28:45",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 4456,
+                  "nodeType": "ExpressionStatement",
+                  "src": "453:28:45"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 4458,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_removeCapper",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4449,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4448,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4458,
+                  "src": "417:15:45",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4447,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "417:7:45",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "416:17:45"
+            },
+            "returnParameters": {
+              "id": 4450,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "443:0:45"
+            },
+            "scope": 4459,
+            "src": "394:94:45",
+            "stateMutability": "nonpayable",
+            "superFunction": 183,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 4460,
+        "src": "67:423:45"
+      }
+    ],
+    "src": "0:491:45"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/frangio/oz/contracts/contracts/mocks/CapperRoleMock.sol",
+    "exportedSymbols": {
+      "CapperRoleMock": [
+        4459
+      ]
+    },
+    "id": 4460,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4427,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:45"
+      },
+      {
+        "absolutePath": "/home/frangio/oz/contracts/contracts/access/roles/CapperRole.sol",
+        "file": "../access/roles/CapperRole.sol",
+        "id": 4428,
+        "nodeType": "ImportDirective",
+        "scope": 4460,
+        "sourceUnit": 185,
+        "src": "25:40:45",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 4429,
+              "name": "CapperRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 184,
+              "src": "94:10:45",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CapperRole_$184",
+                "typeString": "contract CapperRole"
+              }
+            },
+            "id": 4430,
+            "nodeType": "InheritanceSpecifier",
+            "src": "94:10:45"
+          }
+        ],
+        "contractDependencies": [
+          184
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 4459,
+        "linearizedBaseContracts": [
+          4459,
+          184
+        ],
+        "name": "CapperRoleMock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 4439,
+              "nodeType": "Block",
+              "src": "157:39:45",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 4436,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4432,
+                        "src": "181:7:45",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 4435,
+                      "name": "_removeCapper",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        4458
+                      ],
+                      "referencedDeclaration": 4458,
+                      "src": "167:13:45",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 4437,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "167:22:45",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 4438,
+                  "nodeType": "ExpressionStatement",
+                  "src": "167:22:45"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 4440,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeCapper",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4433,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4432,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4440,
+                  "src": "133:15:45",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4431,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "133:7:45",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "132:17:45"
+            },
+            "returnParameters": {
+              "id": 4434,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "157:0:45"
+            },
+            "scope": 4459,
+            "src": "111:85:45",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 4445,
+              "nodeType": "Block",
+              "src": "251:64:45",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 4446,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 4443,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 4442,
+                  "name": "onlyCapper",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 117,
+                  "src": "240:10:45",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "240:10:45"
+              }
+            ],
+            "name": "onlyCapperMock",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4441,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "225:2:45"
+            },
+            "returnParameters": {
+              "id": 4444,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "251:0:45"
+            },
+            "scope": 4459,
+            "src": "202:113:45",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 4457,
+              "nodeType": "Block",
+              "src": "443:45:45",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 4454,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4448,
+                        "src": "473:7:45",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 4451,
+                        "name": "super",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11834,
+                        "src": "453:5:45",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_super$_CapperRoleMock_$4459",
+                          "typeString": "contract super CapperRoleMock"
+                        }
+                      },
+                      "id": 4453,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "_removeCapper",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 183,
+                      "src": "453:19:45",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 4455,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "453:28:45",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 4456,
+                  "nodeType": "ExpressionStatement",
+                  "src": "453:28:45"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 4458,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_removeCapper",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4449,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4448,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4458,
+                  "src": "417:15:45",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4447,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "417:7:45",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "416:17:45"
+            },
+            "returnParameters": {
+              "id": 4450,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "443:0:45"
+            },
+            "scope": 4459,
+            "src": "394:94:45",
+            "stateMutability": "nonpayable",
+            "superFunction": 183,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 4460,
+        "src": "67:423:45"
+      }
+    ],
+    "src": "0:491:45"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.7+commit.6da8b019.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.9",
+  "updatedAt": "2019-07-26T18:01:40.234Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "contractName": "ERC165NotSupported",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.7+commit.6da8b019\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/frangio/oz/contracts/contracts/mocks/ERC165/ERC165NotSupported.sol\":\"ERC165NotSupported\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/frangio/oz/contracts/contracts/mocks/ERC165/ERC165NotSupported.sol\":{\"keccak256\":\"0x250ba4456a658074bf73519eafc2938b08c06cd86123ccf5c3e4b8775b1385a2\",\"urls\":[\"bzzr://0c3403023529ea864540c65f25fd6b1261964adc65e895be66556199a285b034\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a72305820035093683209d5d6c172d26832e85e8d6bb50b8b7a9c370a449180b8feae42f20029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a72305820035093683209d5d6c172d26832e85e8d6bb50b8b7a9c370a449180b8feae42f20029",
+  "sourceMap": "25:84:51:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:84:51;;;;;;;",
+  "deployedSourceMap": "25:84:51:-;;;;;",
+  "source": "pragma solidity ^0.5.0;\n\ncontract ERC165NotSupported {\n    // solhint-disable-previous-line no-empty-blocks\n}\n",
+  "sourcePath": "/home/frangio/oz/contracts/contracts/mocks/ERC165/ERC165NotSupported.sol",
+  "ast": {
+    "absolutePath": "/home/frangio/oz/contracts/contracts/mocks/ERC165/ERC165NotSupported.sol",
+    "exportedSymbols": {
+      "ERC165NotSupported": [
+        4671
+      ]
+    },
+    "id": 4672,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4670,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:51"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 4671,
+        "linearizedBaseContracts": [
+          4671
+        ],
+        "name": "ERC165NotSupported",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 4672,
+        "src": "25:84:51"
+      }
+    ],
+    "src": "0:110:51"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/frangio/oz/contracts/contracts/mocks/ERC165/ERC165NotSupported.sol",
+    "exportedSymbols": {
+      "ERC165NotSupported": [
+        4671
+      ]
+    },
+    "id": 4672,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4670,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:51"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 4671,
+        "linearizedBaseContracts": [
+          4671
+        ],
+        "name": "ERC165NotSupported",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 4672,
+        "src": "25:84:51"
+      }
+    ],
+    "src": "0:110:51"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.7+commit.6da8b019.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.9",
+  "updatedAt": "2019-07-26T18:01:40.238Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

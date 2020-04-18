@@ -1,0 +1,805 @@
+{
+  "contractName": "AddressImpl",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isContract",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "toPayable",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.7+commit.6da8b019\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isContract\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/frangio/oz/contracts/contracts/mocks/AddressImpl.sol\":\"AddressImpl\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/frangio/oz/contracts/contracts/mocks/AddressImpl.sol\":{\"keccak256\":\"0xbde327f6c0e0845b5ea4859bbedf6d55ebbdb39a947e41c8d7aa65a1dbbeb72c\",\"urls\":[\"bzzr://484f91afd7e021ac84df56c719553add8a73f5ed3481e8c152ef07689f6afa3b\"]},\"/home/frangio/oz/contracts/contracts/utils/Address.sol\":{\"keccak256\":\"0xf3358e5819ca73357abd6c90bdfffd0474af54364897f6b3e3234c4b71fbe9a1\",\"urls\":[\"bzzr://f7f6da60a184233fd666ac44e6fb2bd51ca6ebdc4867a310d368049aa4e62786\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060d58061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80631627905514602d575b600080fd5b606c60048036036020811015604157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506086565b604051808215151515815260200191505060405180910390f35b6000608f826096565b9050919050565b600080823b90506000811191505091905056fea165627a7a7230582042be6890a81e784f09a737f3f296c7f27ebf258ee7261e8380a1f802c4252ffa0029",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80631627905514602d575b600080fd5b606c60048036036020811015604157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506086565b604051808215151515815260200191505060405180910390f35b6000608f826096565b9050919050565b600080823b90506000811191505091905056fea165627a7a7230582042be6890a81e784f09a737f3f296c7f27ebf258ee7261e8380a1f802c4252ffa0029",
+  "sourceMap": "57:146:40:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;57:146:40;;;;;;;",
+  "deployedSourceMap": "57:146:40:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;57:146:40;;;;;;;;;;;;;;;;;;;84:117;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;84:117:40;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;144:4;167:27;186:7;167:18;:27::i;:::-;160:34;;84:117;;;:::o;542:413:131:-;602:4;805:12;914:7;902:20;894:28;;947:1;940:4;:8;933:15;;;542:413;;;:::o",
+  "source": "pragma solidity ^0.5.0;\n\nimport \"../utils/Address.sol\";\n\ncontract AddressImpl {\n    function isContract(address account) external view returns (bool) {\n        return Address.isContract(account);\n    }\n}\n",
+  "sourcePath": "/home/frangio/oz/contracts/contracts/mocks/AddressImpl.sol",
+  "ast": {
+    "absolutePath": "/home/frangio/oz/contracts/contracts/mocks/AddressImpl.sol",
+    "exportedSymbols": {
+      "AddressImpl": [
+        4246
+      ]
+    },
+    "id": 4247,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4231,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:40"
+      },
+      {
+        "absolutePath": "/home/frangio/oz/contracts/contracts/utils/Address.sol",
+        "file": "../utils/Address.sol",
+        "id": 4232,
+        "nodeType": "ImportDirective",
+        "scope": 4247,
+        "sourceUnit": 11440,
+        "src": "25:30:40",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 4246,
+        "linearizedBaseContracts": [
+          4246
+        ],
+        "name": "AddressImpl",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 4244,
+              "nodeType": "Block",
+              "src": "150:51:40",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 4241,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4234,
+                        "src": "186:7:40",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 4239,
+                        "name": "Address",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11439,
+                        "src": "167:7:40",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Address_$11439_$",
+                          "typeString": "type(library Address)"
+                        }
+                      },
+                      "id": 4240,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "isContract",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 11438,
+                      "src": "167:18:40",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$",
+                        "typeString": "function (address) view returns (bool)"
+                      }
+                    },
+                    "id": 4242,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "167:27:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 4238,
+                  "id": 4243,
+                  "nodeType": "Return",
+                  "src": "160:34:40"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 4245,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isContract",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4235,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4234,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4245,
+                  "src": "104:15:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4233,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "104:7:40",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "103:17:40"
+            },
+            "returnParameters": {
+              "id": 4238,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4237,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4245,
+                  "src": "144:4:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4236,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "144:4:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "143:6:40"
+            },
+            "scope": 4246,
+            "src": "84:117:40",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 4334,
+              "nodeType": "Block",
+              "src": "283:50:41",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 4331,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4324,
+                        "src": "318:7:41",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 4329,
+                        "name": "Address",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11569,
+                        "src": "300:7:41",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Address_$11569_$",
+                          "typeString": "type(library Address)"
+                        }
+                      },
+                      "id": 4330,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "toPayable",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 11568,
+                      "src": "300:17:41",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_address_$returns$_t_address_payable_$",
+                        "typeString": "function (address) pure returns (address payable)"
+                      }
+                    },
+                    "id": 4332,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "300:26:41",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "functionReturnParameters": 4328,
+                  "id": 4333,
+                  "nodeType": "Return",
+                  "src": "293:33:41"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 4335,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "toPayable",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4325,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4324,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4335,
+                  "src": "226:15:41",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4323,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "226:7:41",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "225:17:41"
+            },
+            "returnParameters": {
+              "id": 4328,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4327,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4335,
+                  "src": "266:15:41",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 4326,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "266:15:41",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "265:17:41"
+            },
+            "scope": 4336,
+            "src": "207:126:41",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4247,
+        "src": "57:146:40"
+      }
+    ],
+    "src": "0:204:40"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/frangio/oz/contracts/contracts/mocks/AddressImpl.sol",
+    "exportedSymbols": {
+      "AddressImpl": [
+        4246
+      ]
+    },
+    "id": 4247,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4231,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:40"
+      },
+      {
+        "absolutePath": "/home/frangio/oz/contracts/contracts/utils/Address.sol",
+        "file": "../utils/Address.sol",
+        "id": 4232,
+        "nodeType": "ImportDirective",
+        "scope": 4247,
+        "sourceUnit": 11440,
+        "src": "25:30:40",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 4246,
+        "linearizedBaseContracts": [
+          4246
+        ],
+        "name": "AddressImpl",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 4244,
+              "nodeType": "Block",
+              "src": "150:51:40",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 4241,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4234,
+                        "src": "186:7:40",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 4239,
+                        "name": "Address",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11439,
+                        "src": "167:7:40",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Address_$11439_$",
+                          "typeString": "type(library Address)"
+                        }
+                      },
+                      "id": 4240,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "isContract",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 11438,
+                      "src": "167:18:40",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$",
+                        "typeString": "function (address) view returns (bool)"
+                      }
+                    },
+                    "id": 4242,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "167:27:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 4238,
+                  "id": 4243,
+                  "nodeType": "Return",
+                  "src": "160:34:40"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 4245,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isContract",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4235,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4234,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4245,
+                  "src": "104:15:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4233,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "104:7:40",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "103:17:40"
+            },
+            "returnParameters": {
+              "id": 4238,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4237,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4245,
+                  "src": "144:4:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4236,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "144:4:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "143:6:40"
+            },
+            "scope": 4246,
+            "src": "84:117:40",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 4334,
+              "nodeType": "Block",
+              "src": "283:50:41",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 4331,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4324,
+                        "src": "318:7:41",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 4329,
+                        "name": "Address",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11569,
+                        "src": "300:7:41",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Address_$11569_$",
+                          "typeString": "type(library Address)"
+                        }
+                      },
+                      "id": 4330,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "toPayable",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 11568,
+                      "src": "300:17:41",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_address_$returns$_t_address_payable_$",
+                        "typeString": "function (address) pure returns (address payable)"
+                      }
+                    },
+                    "id": 4332,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "300:26:41",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "functionReturnParameters": 4328,
+                  "id": 4333,
+                  "nodeType": "Return",
+                  "src": "293:33:41"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 4335,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "toPayable",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4325,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4324,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4335,
+                  "src": "226:15:41",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4323,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "226:7:41",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "225:17:41"
+            },
+            "returnParameters": {
+              "id": 4328,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4327,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4335,
+                  "src": "266:15:41",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 4326,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "266:15:41",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "265:17:41"
+            },
+            "scope": 4336,
+            "src": "207:126:41",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4247,
+        "src": "57:146:40"
+      }
+    ],
+    "src": "0:204:40"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.7+commit.6da8b019.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.9",
+  "updatedAt": "2019-07-26T19:18:30.036Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
